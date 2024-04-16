@@ -313,6 +313,8 @@ Check out these articles for more examples of how recursion may come up in engin
 - [Hacker Noon](https://hackernoon.com/coding-interview-recursion-f0d60c9dbb60)
 - [Interviewing.io](https://interviewing.io/recursion-interview-questions)
 
+![](assets/originals/interviews.png)
+
 # Additional Resources.
 
 - Sketching out a [recursive function](https://www.youtube.com/watch?v=bGC2fNALbNU).
