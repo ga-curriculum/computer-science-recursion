@@ -8,10 +8,8 @@ Open your Terminal application and navigate to your `~/code/ga/labs` directory:
 cd ~/code/ga/labs
 ```
 
-
 Make a new repository on [GitHub](https://github.com/) named [computer-science-recursion].
 
-<!-- tktk -->
 
 Clone a copy of your remote repo locally by using the `git clone` command:
 
