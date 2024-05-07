@@ -1,4 +1,4 @@
-# ![Recursion](./assets/tktk-hero.png)
+# ![Computer Science - Recursion](./assets/hero.png)
 
 ## About
 
