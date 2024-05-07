@@ -1,13 +1,12 @@
-# ![[tktk Module Name]](./assets/tktk-hero.png)
+# ![Recursion](./assets/tktk-hero.png)
 
 ## About
 
 This lesson introduces the wonders of recursion. By the end of this lesson, you will be able to:
 
-* Define recursion.
-* Write the base case and recursive cases of a recursive function.
-* Identify functions that use recursion and explain why it’s used.
-
+- Define recursion.
+- Write the base case and recursive cases of a recursive function.
+- Identify functions that use recursion and explain why it’s used.
 
 ## Prerequisites
 
