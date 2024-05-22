@@ -1,25 +1,47 @@
 # ![Computer Science - Recursion](./assets/hero.png)
 
-## About
+# Recursion
 
-This lesson introduces the wonders of recursion. By the end of this lesson, you will be able to:
+## Overview
 
-- Define recursion.
-- Write the base case and recursive cases of a recursive function.
-- Identify functions that use recursion and explain why it’s used.
+Recursion is a programming technique where a function calls itself in order to solve a problem. Each recursive call works on a smaller instance of the problem, gradually reducing the complexity until it reaches a base case, which stops the recursion.
 
-## Prerequisites
+### Prerequisites
 
 - Big O Notation
 
-## Time to complete
+### Learning Objectives
 
-Estimated time to complete core lab exercise: 1.5 hours
+By the end of this module, learners will be able to:
+
+- Identify cases for recursion.
+- Write the base case and recursive cases of a recursive function.
+- Identify functions that use recursion and explain why it’s used.
 
 ## Content
 
-- [Setup](./setup/README.md)
-- [Exercise](./exercise/README.md)
+There are two components to this module:
+
+1. Lesson: [Recursion](./lesson/README.md)
+2. Exercise: [Writing Recursive Functions](https://git.generalassemb.ly/modular-curriculum-all-courses/cs-recursion-starter-code)
+
+## Solution Code 
+
+- Exercise Solution: [Recursion](./solution/README.md)
+
+### Time to Complete
+
+1.5 hours total:
+
+- 0.5 hour - Recursion Lesson
+- 1 hour - Writing Recursive Functions Exercise
+
+## Additional Resources
+
+- [How recursion comes up in job interviews](https://hackernoon.com/coding-interview-recursion-f0d60c9dbb60): An article discussing how recursion is often featured in job interviews.
+- [More thoughts on recursion in job interviews](https://www.byte-by-byte.com/recursion/): Additional insights on the use of recursion in job interviews.
+- [Sketching out a recursive function](https://www.youtube.com/watch?v=bGC2fNALbNU): A video tutorial on drawing recursive functions.
+- Just for fun: The [recursion subreddit](https://www.reddit.com/r/recursion).
 
 ## Internal resources
 

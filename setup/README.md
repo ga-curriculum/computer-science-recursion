@@ -1,38 +1,33 @@
 # ![Computer Science - Recursion - Setup](./assets/hero.png)
 
-## Setup
+1. **Fork and Clone the Starter Code**
 
-Open your Terminal application and navigate to your `~/code/ga/labs` directory:
+   Fork the repository and clone it to your local machine using the following link: [Starter Code](https://git.generalassemb.ly/modular-curriculum-all-courses/cs-recursion-starter-code).
 
-```bash
-cd ~/code/ga/labs
-```
+2. **Install Dependencies**
 
-Make a new repository on [GitHub](https://github.com/) named [computer-science-recursion].
+   Navigate to the project directory and install the necessary dependencies by running:
 
+   ```bash
+   npm install
+   ```
 
-Clone a copy of your remote repo locally by using the `git clone` command:
+3. **Open the Project in Your Code Editor**
 
-```bash
-git clone https://github.com/<your-username>/computer-science-recursion.git 
-```
+   Open the project folder in your preferred code editor. For example, if you are using Visual Studio Code, run:
 
-> 📚 Note: In the link above, where it says `<your-username>`, you should see the username from your GitHub account.
+   ```bash
+   code .
+   ```
 
-Next, `cd` into your new cloned directory, `computer-science-recursion`:
+4. **Complete the Exercises**
 
-```bash
-cd computer-science-recursion
-```
+   Follow the provided instructions in the project to complete the exercises on recursion.
 
-Create a new file in your directory called `recursion.js`:
+5. **Check Your Work**
 
-```bash
-touch recursion.js
-```
+   To verify your solutions, run the test file by executing:
 
-Open the project's folder in your code editor:
-
-```bash
-code .
-```
+   ```bash
+   npm test
+   ```

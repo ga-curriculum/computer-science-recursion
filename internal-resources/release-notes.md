@@ -2,17 +2,13 @@
 
 ## Version 1.0 - Updates from legacy content
 
-This release modularizes the legacy [tktk previous lab name] lab and provides some other minor updates detailed below.
+This release modularizes the legacy MyGA module.
 
 ### Release details
 
 #### Additions
 
-
-
 #### Changes
-
-
 
 #### Removals
 
