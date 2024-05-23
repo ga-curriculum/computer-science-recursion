@@ -1,14 +1,14 @@
 # ![Recursion - Exercise](./assets/hero.png)
 
-# What is recursion?
+## What is recursion?
 
-At the most simple, recursion is when a function calls itself. We know a function can call upon other functions to achieve its goal, but it can also call upon itself to achieve its goal.
+Put simply, recursion is when a function calls itself. We know a function can call upon other functions to achieve its goal, but it can also call upon itself.
 
 When your functions start getting too big to read clearly and test easily, you split them up into smaller functions that each perform part of the larger task. A recursive function, however, will achieve a small part of the larger task, then pass the partially completed problem to another call of itself. It’s just another way of breaking down a large problem into smaller bits.
 
-![](assets/originals/recursion.jpeg)
+![Recursion Meme](assets/originals/recursion.jpeg)
 
-# A Useless Recursive Function
+## A Useless Recursive Function
 
 Let’s take a look at a function that calls itself and consider what it does. (Warning: running this program might cause your JS console to stall forever, or crash.)
 
@@ -27,9 +27,9 @@ Why does this function come with a warning? When we call `philosopher()` initial
 
 In practice, the function will eventually crash. Your computer will run out of memory and you’ll see an error message saying something like, “stack overflow exception” or “maximum call stack exceeded.” That’s not really what we’re looking for.
 
-# Fixing the problem
+## Fixing the problem
 
-Let’s look at another recursive function - but this one doesn’t come with a warning label (AKA, it won’t crash your computer).
+Let’s look at another recursive function — one that doesn’t come with a warning label (i.e., won’t crash your computer):
 
 ```javascript
 const countDown = (num) => {
@@ -41,9 +41,9 @@ const countDown = (num) => {
 };
 ```
 
-This function just counts down from a given number to zero. Notice how the last part of the function calls itself, but with a slightly different argument than the number initially given. This is what makes the function recursive and stops it from running forever, into eternity.
+This function just counts down from a given number to zero. Notice how the last part of the function calls itself, only with a slightly different argument than the number initially given. This is what makes the function recursive and stops it from running forever into eternity.
 
-# Three Steps to Recursion
+## Three Steps to Recursion
 
 We can break down the process of a recursive function into three steps.
 
@@ -77,13 +77,13 @@ const countDown = (num) => {
 };
 ```
 
-The base case establishes when the recursive function can finally return a specific value, and no longer needs to continue calling itself to find that specific value. The base case is where the function bottoms out.
+The base case establishes when the recursive function can finally return a specific value and no longer needs to continue calling itself to find that value. Put another way, the base case is where the function bottoms out.
 
-In the countdown function, we first check if the number given is less than `0`. Since `3` is not less than `0`, we can proceed. Once we get below `0`, the countdown is over and the function can complete.
+In the countdown function, we first check if the number given is less than `0`. Because `3` is not less than `0`, we can proceed. Once we get below `0`, the countdown is over and the function can complete.
 
 ## The Action
 
-Between the base case and recursive case, the function performs an action. In our countdown function, we simply want to count each number before proceeding to the next one, so we `console log() 3`.
+Between the base case and recursive case, the function performs an action. In our countdown function, we simply want to count each number before proceeding to the next one, so we `console.log()` `3`:
 
 ```javascript
 const countDown = (num) => {
@@ -94,7 +94,7 @@ const countDown = (num) => {
 };
 ```
 
-You may see the action introduced by “else”, as below. This doesn’t change the function, just adds in some plain language explaining what happens in the function.
+You may see the action introduced by “else,” like below. This doesn’t change the function, it just adds in some plain language to explain what's happening in the function:
 
 ```javascript
 const countDown = (num) => {
@@ -108,7 +108,7 @@ const countDown = (num) => {
 
 ## The Recursive Case
 
-Finally, we use recursion by calling the `countDown()` function again. Only this time, we feed it the next number in the sequence, by providing `num - 1` as the argument.
+Finally, we use recursion by calling the `countDown()` function again. Only this time, we feed it the next number in the sequence by providing `num - 1` as the argument:
 
 ```javascript
 const countDown = (num) => {
@@ -120,34 +120,32 @@ const countDown = (num) => {
 };
 ```
 
-In plain English, let's explain what happens when this function reaches the recurisve case. (Remember we passed in `3` as the argument)
+### Knowledge Check
 
-1. Count the number ``3`, then call the `countDown` function again with `2` as the given number.
-2. The function makes sure that `2` is still greater than zero. It is! Proceed.
-3. Count the number `2`, and call `countDow`n again with `1`.
-4. The function checks `1` against `0` (it’s greater), console logs `1`, and calls `countDown` with `0`.
-5. The `countDown` confirms that `0` isn't less than `0`, counts the number `0`, and call `countDown` again with `-1` as the given number.
-6. Finally, the base case occurs! The “if” check realizes we've gone past `0` and are into negative numbers, and simply returns to stop the sequence, instead of continuing on with the next few steps.
+In plain English, explain what happens when this function reaches the recursive case. (Remember that we've passed in `3` as the argument.)
 
-## Knowledge Check
+*Hint: There are six things that happen before the base case occurs.*
 
-If a recursive function calls itself twice in the recursive case, this would result in **\_** complexity.
 
-1. Linear
-2. Quadratic
-3. Constant
-4. Logarithmic
-
-<details open>
-<summary>Reveal the answer.
+<br>
+<details>
+<summary>
+Click for answer
 </summary>
 <br>
-Correct answer: 2 - Quadratic. If each recursive call generates two more recursions, this would result in quadratic growth, meaning that its complexity would scale at an N^2 rate. At the first layer, it would recurse twice. In the second layer, you would have four recursive calls. The third layer would have eight recursions, and so on.
+Here’s what the function is doing once it gets to the recursive case:
+
+1. Count the number 3, then call the countDown() function again with 2 as the given number.
+2. The function makes sure that 2 is still greater than 0. It is! Proceed.
+3. Count the number 2 and call countDown() again with 1.
+4. The function checks 1 against 0 (it’s greater), counts 1, and calls countDown() with 0.
+5. The countDown() confirms that 0 isn’t less than 0, counts the number 0, and calls countDown() again with -1 as the given number.
+6. Finally, the base case occurs! The “if” check realizes we’ve gone past 0, into negative numbers, and simply returns to stop the sequence, instead of continuing on with the next few steps.
 </details>
+<br>
 
----
 
-# Writing Recursive functions
+## Writing Recursive functions
 
 There are four basic steps to writing a recursive function:
 
@@ -156,29 +154,37 @@ There are four basic steps to writing a recursive function:
 3. Perform the action step
 4. Return the function, with new arguments to make progress towards the base case
 
-Let’s work through these steps using a function that will add all the numbers in an array. Follow along in your `recursion.js` file.
+Let’s work through these steps using a JavaScript function that will add all of the numbers in an array. 
 
-## First Things First: Function and parameters
+[Pop open a blank CodePen to follow along!](https://codepen.io/pen)
+
+(Hint: Open the console at the bottom of the CodePen to see what happens when your code runs.)
+
+## Step 1: Function and Parameters
 
 First, let’s write our function. We can use a basic sum function for this problem.
 
 When writing recursive functions, our parameters are important. In this case, we’ll set our parameters as the array we’re in, the index we’re at, and the sum of the numbers so far:
 
 ```javascript
-const sumArrayOfNums = (arr, index, sum) => {};
+const sumArrayOfNums = (arr, index, sum) => {
+
+};
 ```
 
-### Even Better Parameters
+## Even Better Parameters
 
 With recursive functions, it can be helpful to give your parameters default values to reduce some of the function’s calls.
 
-In our sum function example, we might set the index and sum at 0. When they’re defined this way, the index and sum don’t need to be provided when calling the function:
+In our sum function example, we might set the index and sum at `0`. When they’re defined this way, the index and sum don’t need to be provided when calling the function:
 
 ```javascript
-const sumArrayOfNums = (arr, index = 0, sum = 0) => {};
+const sumArrayOfNums = (arr, index = 0, sum = 0) => {
+
+};
 ```
 
-## Step Two: Define the Base Case
+## Step 2: Define the Base Case
 
 Now that our parameters are set, we can add the base case — when the function can stop and return the computed result.
 
@@ -192,7 +198,7 @@ const sumArrayOfNums = (arr, index = 0, sum = 0) => {
 };
 ```
 
-## Step Three: Action Step
+## Step 3: Action Step
 
 Next, add the action step. Here, we’ll add the number at the current index in the array to the sum:
 
@@ -219,9 +225,9 @@ const sumArrayOfNums = (arr, index = 0, sum = 0) => {
 };
 ```
 
-> Don’t forget to return the recursive function call! Otherwise, the final return value won’t go beyond the second-to-last recursive call. Each recursive call needs to return the value of the next call, so the end result gets passed back up the chain to the very first call of the function (the base case).
+Don’t forget to return the recursive function call! Otherwise, the final return value won’t go beyond the second-to-last recursive call. Each recursive call needs to return the value of the next call, so the end result gets passed back up the chain to the very first call of the function (the base case).
 
-In your `recursion.js`, test your function with the array `[2, 4, 5, 8]`. (We’ll do the math for you: You should get `19`.)
+In your CodePen, test your function with the array `[2, 4, 5, 8]`. (We’ll do the math for you: You should get `19`.)
 
 ## Recursive Helper Functions
 
@@ -251,7 +257,7 @@ const sumArrayOfNums = (arr) => {
 };
 ```
 
-# Why Recursion?
+## Why Recursion?
 
 To answer that question, we can compare recursion to something you already know and love: loops, which use iteration.
 
@@ -265,15 +271,17 @@ const countDown = (num) => {
 };
 ```
 
-In most cases, iteration is more efficient than recursion, since it uses less memory space. So why use recursion at all?
+In most cases, iteration is more efficient than recursion, as it uses less memory space. This begs the question: Why use recursion at all?
 
-As we tackle more complex problems, some will make more sense to solve recursively than iteratively. Recursion is written more cleanly and with less code, especially when a problem gets larger and larger.
+## Here’s Why
 
-But the bottom line is that there’s no hard and fast rule. A quick search on [Stack Overflow](https://stackoverflow.com/search?q=recursion+or+iteration) will return myriad opinions on whether recursion or loops are better. Some programmers think recursion is easier to read, while others argue that loops are easier; some people argue that loops are more concise than recursion, while others argue that recursion can be written with less code; some people see more risks in writing loops than in recursion and vice versa.
+As you tackle more complex problems, some will just make more sense to solve recursively than iteratively. Recursion is written more cleanly and with less code, especially when a problem gets larger and larger.
+
+But the bottom line is that there’s no hard and fast rule. A quick search on [Stack Overflow](https://stackoverflow.com/search?q=recursion+or+iteration) will return myriad opinions on whether recursion or loops are better. Some programmers think recursion is easier to read, while others argue that loops are easier; some argue that loops are more concise than recursion, while others argue that recursion can be written with less code; some see more risks in writing loops than in using recursion, and vice versa.
 
 In the end, it’s up to you and your understanding of the problem you are solving.
 
-# When to Use Recursion
+## When to Use Recursion
 
 Recursion operates by breaking down a problem into smaller chunks. So, if you have a problem that can be broken down in this way, recursion is a natural fit.
 
@@ -284,7 +292,7 @@ Use recursion in any situation that requires exploring multiple possibilities or
 
 Recursion provides the simplest solution to problems like these by allowing a function to continue through each possibility in a new recursive call.
 
-# Knowledge Check
+### Knowledge Check
 
 Which of these scenarios is best suited for a recursive function?
 
@@ -292,30 +300,34 @@ Which of these scenarios is best suited for a recursive function?
 2. Determining all possible words that can be formed from a given set of letters.
 3. When there's a limited amount of space in memory and we need the most efficient solution.
 
-<details open>
-<summary>Reveal the answer.
+
+<br>
+<details>
+<summary>
+Click for answer
 </summary>
 <br>
-Correct answer: 2. Recursion is a great solution to problems that need to explore every option - all possibilities, combinations, etc.
+Correct answer: 2. 
+
+Recursion is a great solution to problems that need to explore every option - all possibilities, combinations, etc.
 </details>
+<br>
 
----
-
-# Let's Talk About interviews
+## Let's Talk About interviews
 
 Given how frequently it can be used to write algorithms and functions, recursion is a common interview topic. Here’s what you might encounter:
 
 - Determining if a given problem is a good fit for a recursive solution and why.
-- Writing a recursive function. Even if you’re not asked to code the solution, you might be asked to sketch or explain how the function would be written. Here’s what that might look like.
+- Writing a recursive function. Even if you’re not asked to code the solution, you might be asked to sketch or explain how the function would be written. [Here’s what that might look like](https://www.youtube.com/watch?v=bGC2fNALbNU).
 
 Check out these articles for more examples of how recursion may come up in engineering interviews:
 
 - [Hacker Noon](https://hackernoon.com/coding-interview-recursion-f0d60c9dbb60)
 - [Interviewing.io](https://interviewing.io/recursion-interview-questions)
 
-![](assets/originals/interviews.png)
+![Brain](assets/originals/interviews.png)
 
-# Additional Resources.
+## Additional Resources.
 
 - Sketching out a [recursive function](https://www.youtube.com/watch?v=bGC2fNALbNU).
 - Just for fun: The [recursion subreddit](https://www.reddit.com/r/recursion).
