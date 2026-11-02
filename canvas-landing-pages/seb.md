@@ -23,7 +23,7 @@ By the end of this module, learners will be able to:
 There are two components to this module:
 
 1. Lesson: [Recursion](../lesson/README.md)
-2. Exercise: [Writing Recursive Functions](https://git.generalassemb.ly/modular-curriculum-all-courses/cs-recursion-starter-code)
+2. Exercise: [Writing Recursive Functions](https://github.com/ga-curriculum/cs-recursion-starter-code)
 
 ## Solution Code 
 
